@@ -684,7 +684,7 @@ namespace Gravity
             graphics.DrawImage(bitmap, 0, 0);
             for (Int32 i = 0; i < objekter.Length; i++)
             {
-                graphics.FillEllipse(new SolidBrush(objekter[i].farve), objekter[i].positionX, objekter[i].positionY, (Int32)objekter[i].størrelse, (Int32)objekter[i].størrelse);
+                //graphics.FillEllipse(new SolidBrush(objekter[i].farve), objekter[i].positionX, objekter[i].positionY, (Int32)objekter[i].størrelse, (Int32)objekter[i].størrelse);
             }
             graphics.Save();
             g.DrawImage(image, 0, 0);
