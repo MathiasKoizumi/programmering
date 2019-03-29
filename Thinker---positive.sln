@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Thinker---positive", "Thinker---positive.csproj", "{C65B97BA-2A54-4EE4-BD28-1F2A5242C689}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C65B97BA-2A54-4EE4-BD28-1F2A5242C689}.Debug|x86.ActiveCfg = Debug|x86
+		{C65B97BA-2A54-4EE4-BD28-1F2A5242C689}.Debug|x86.Build.0 = Debug|x86
+		{C65B97BA-2A54-4EE4-BD28-1F2A5242C689}.Release|x86.ActiveCfg = Release|x86
+		{C65B97BA-2A54-4EE4-BD28-1F2A5242C689}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CD93AC73-0527-4050-8A4E-CEF47574AC37}
+	EndGlobalSection
+EndGlobal

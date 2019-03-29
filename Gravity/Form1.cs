@@ -7,261 +7,91 @@ using System.Windows.Forms;
 
 namespace Gravity
 {
-	public class Form1 : Form
-	{
-		private NumericUpDown antalObjekter;
+    public class Form1 : Form
+    {
+        public Int32 ThisWasMadeSolelyByMathiasKoizumi = Int32.MaxValue;
 
-		private Bitmap bitmap;
+        private NumericUpDown antalObjekter;
 
-		private Button button2;
+        private Bitmap bitmap;
 
-		private CheckBox checkBox1;
+        private Button button2;
 
-		private CheckBox checkBox2;
+        private CheckBox checkBox1;
 
-		private CheckBox checkBox4;
+        private CheckBox checkBox2;
 
-		private CheckBox checkBox5;
+        private CheckBox checkBox4;
 
-		private IContainer components;
+        private CheckBox checkBox5;
 
-		private Graphics g;
+        private IContainer components;
 
-		private Label label1;
+        private Graphics g;
 
-		private Label label2;
+        private Label label1;
 
-		private Label label3;
+        private Label label2;
 
-		private Label label4;
+        private Label label3;
 
-		private Label label5;
+        private Label label4;
 
-		private Label label6;
+        private Label label5;
 
-		private NumericUpDown numericUpDown1;
+        private Label label6;
 
-		private NumericUpDown numericUpDown2;
+        private NumericUpDown numericUpDown1;
 
-		private NumericUpDown numericUpDown4;
+        private NumericUpDown numericUpDown2;
 
-		private Ding[] objekter;
+        private NumericUpDown numericUpDown4;
 
-		private Panel panel1;
+        private Ding[] objekter;
 
-		private Random rand;
+        private Panel panel1;
 
-		private NumericUpDown rounds;
+        private Random rand;
 
-		private NumericUpDown sizeDrops;
+        private NumericUpDown rounds;
 
-		private NumericUpDown speed;
+        private NumericUpDown sizeDrops;
 
-		private int spredning;
+        private NumericUpDown speed;
 
-		private Button button1;
+        private Int32 spredning;
 
-		private Button button3;
+        private Button button1;
 
-		private bool mayAll = true;
+        private Button button3;
 
-		private bool programOn = true;
+        private CheckBox checkBox3;
 
-		private bool EvovleAllMyPrograms = true;
+        private CheckBox checkBox6;
 
-		private bool AddAnyCodeYouLikeAnywhere = true;
+        private bool infinityOn = true;
 
-		private bool DoWhatEverYouWant = true;
+        private string path = "C:\\test\\";
 
-		private bool BeInventive = true;
-
-		private bool ModifyMyCode = true;
-
-		private bool MakeFileEXEonDesktopWithDescriptiveName = true;
-
-		private bool enhanceProgrammingSkills = true;
-
-		private CheckBox checkBox3;
-
-		private CheckBox checkBox6;
-
-		private bool infinityOn = true;
-
-		private string path = "C:\\test\\";
         private CheckBox checkBox7;
+
+        private Label label7;
+
+        private TextBox textBox1;
+
+        private Label label8;
+
+        private TextBox textBox2;
+
         public string WriteItToPath;
 
-		private bool MyBool()
-		{
-			int num = rand.Next(0, 100);
-			if (num < 70)
-			{
-				return false;
-			}
-			return true;
-		}
-
-		private void Dothis()
-		{
-			bool flag = MyBool();
-			bool flag2 = MyBool();
-			bool flag3 = MyBool();
-			bool flag4 = MyBool();
-			bool flag5 = MyBool();
-			bool flag6 = MyBool();
-			bool flag7 = MyBool();
-			bool flag8 = MyBool();
-			bool flag9 = MyBool();
-			bool flag10 = MyBool();
-			bool flag11 = MyBool();
-			bool flag12 = MyBool();
-			bool flag13 = MyBool();
-			bool flag14 = MyBool();
-			bool flag15 = MyBool();
-			bool flag16 = MyBool();
-			bool flag17 = MyBool();
-			bool flag18 = MyBool();
-			bool flag19 = MyBool();
-			bool flag20 = MyBool();
-			bool flag21 = MyBool();
-			bool flag22 = MyBool();
-			bool flag23 = MyBool();
-			bool flag24 = MyBool();
-			bool flag25 = MyBool();
-			bool flag26 = MyBool();
-			bool flag27 = MyBool();
-			bool flag28 = MyBool();
-			bool flag29 = MyBool();
-			bool flag30 = MyBool();
-			bool flag31 = MyBool();
-			bool flag32 = MyBool();
-			bool flag33 = MyBool();
-			bool flag34 = MyBool();
-			bool flag35 = MyBool();
-			bool flag36 = MyBool();
-			bool flag37 = MyBool();
-			bool flag38 = MyBool();
-			bool flag39 = MyBool();
-			bool flag40 = MyBool();
-			bool flag41 = MyBool();
-			bool flag42 = MyBool();
-			bool flag43 = MyBool();
-			bool flag44 = MyBool();
-			bool flag45 = MyBool();
-			bool flag46 = MyBool();
-			bool flag47 = MyBool();
-			bool flag48 = MyBool();
-			bool flag49 = MyBool();
-			bool flag50 = MyBool();
-			bool flag51 = MyBool();
-			bool flag52 = MyBool();
-		}
-
-		private void animate()
-		{
-			for (int i = 0; i < objekter.Length; i++)
-			{
-				objekter[i].positionX = objekter[i].positionX + (float)objekter[i].hastighedX;
-				objekter[i].positionY = objekter[i].positionY + (float)objekter[i].hastighedY;
-				objekter[i].positionZ = objekter[i].positionZ + (float)objekter[i].hastighedZ;
-				switch (rand.Next(-2, 2))
-				{
-				case 0:
-					objekter[i].hastighedX = rand.Next(-(int)speed.Value, (int)speed.Value);
-					objekter[i].hastighedY = rand.Next(-(int)speed.Value, (int)speed.Value);
-					objekter[i].hastighedZ = rand.Next(-(int)speed.Value, (int)speed.Value);
-					break;
-				case 1:
-					objekter[i].hastighedX = -rand.Next(-(int)speed.Value, (int)speed.Value);
-					objekter[i].hastighedY = -rand.Next(-(int)speed.Value, (int)speed.Value);
-					objekter[i].hastighedZ = -rand.Next(-(int)speed.Value, (int)speed.Value);
-					break;
-				}
-				objekter[i].alder = objekter[i].alder + rand.Next(spredning, spredning);
-				objekter[i].athlete = objekter[i].athlete + rand.Next(spredning, spredning);
-				objekter[i].bossy = objekter[i].bossy + rand.Next(spredning, spredning);
-				objekter[i].Enjoystravel = objekter[i].Enjoystravel + rand.Next(spredning, spredning);
-				objekter[i].Fertile = objekter[i].Fertile + rand.Next(spredning, spredning);
-				objekter[i].funny = objekter[i].funny + rand.Next(spredning, spredning);
-				objekter[i].GoodAtSex = objekter[i].GoodAtSex + rand.Next(spredning, spredning);
-				objekter[i].happy = objekter[i].happy + rand.Next(spredning, spredning);
-				objekter[i].intelligence = objekter[i].intelligence + rand.Next(spredning, spredning);
-				objekter[i].lawfull = objekter[i].lawfull + rand.Next(spredning, spredning);
-				objekter[i].pretty = objekter[i].pretty + rand.Next(spredning, spredning);
-				objekter[i].isGoodAtProgramming = objekter[i].isGoodAtProgramming + rand.Next(spredning, spredning);
-				objekter[i].afraid = objekter[i].afraid + rand.Next(spredning, spredning);
-				objekter[i].buildTerrain = objekter[i].buildTerrain + rand.Next(spredning, spredning);
-				objekter[i].canAdjustCodeWhileRunning = true;
-				objekter[i].CanChangeFormAndSize = objekter[i].CanChangeFormAndSize + rand.Next(spredning, spredning);
-				objekter[i].CanStickToAnotherDing = objekter[i].CanStickToAnotherDing + rand.Next(spredning, spredning);
-				objekter[i].ChangeAnyAttribute = objekter[i].ChangeAnyAttribute + rand.Next(spredning, spredning);
-				objekter[i].ChangeColor = objekter[i].ChangeColor + rand.Next(spredning, spredning);
-				objekter[i].ChangeSourceCode = objekter[i].ChangeSourceCode + rand.Next(spredning, spredning);
-				objekter[i].designer = objekter[i].designer + rand.Next(spredning, spredning);
-				objekter[i].differentiate = objekter[i].differentiate + rand.Next(spredning, spredning);
-				objekter[i].easyGoing = objekter[i].easyGoing + rand.Next(spredning, spredning);
-				objekter[i].GoodAtTeamWork = objekter[i].GoodAtTeamWork + rand.Next(spredning, spredning);
-				objekter[i].LikesToShare = objekter[i].LikesToShare + rand.Next(spredning, spredning);
-				objekter[i].lovesToProgram = objekter[i].lovesToProgram + rand.Next(spredning, spredning);
-				objekter[i].Moods = objekter[i].Moods + rand.Next(spredning, spredning);
-				objekter[i].name = objekter[i].name + rand.Next(spredning, spredning);
-				objekter[i].particles = objekter[i].particles + (float)rand.Next(spredning, spredning);
-				objekter[i].perfectSoldier = objekter[i].perfectSoldier + rand.Next(spredning, spredning);
-				objekter[i].regress = objekter[i].regress + rand.Next(spredning, spredning);
-				objekter[i].respect = objekter[i].respect + rand.Next(spredning, spredning);
-				objekter[i].trader = objekter[i].trader + rand.Next(spredning, spredning);
-				objekter[i].valuta = objekter[i].valuta + rand.Next(spredning, spredning);
-				objekter[i].violent = objekter[i].violent + rand.Next(spredning, spredning);
-				objekter[i].WillingnessToGive = objekter[i].WillingnessToGive + rand.Next(spredning, spredning);
-			}
-		}
-
-		private void button2_Click(object sender, EventArgs e)
-		{
-			designObjekter((int)antalObjekter.Value, (int)speed.Value);
-			while (true)
-			{
-				Dothis();
-				DrawPaintMe();
-				BeActiveAndConsiuous();
-				button1_Click(null, null);
-			}
-		}
-
-		private void Form1_MouseClick(object sender, MouseEventArgs e)
-		{
-			throw new NotImplementedException();
-		}
-
-		private void designObjekter(int number, int speed)
-		{
-			objekter = new Ding[number];
-			for (int i = 0; i < number; i++)
-			{
-				Ding ding = new Ding(rand.Next(-speed, speed), rand.Next(-10, 10), rand.Next(-255, 255), (int)sizeDrops.Value);
-				objekter[i] = ding;
-			}
-		}
-
-		private void DrawPaintMe()
-		{
-			Bitmap image = new Bitmap(bitmap.Width, bitmap.Height);
-			Graphics graphics = Graphics.FromImage(image);
-			graphics = Graphics.FromImage(image);
-			graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
-			graphics.DrawImage(bitmap, 0, 0);
-			for (int i = 0; i < objekter.Length; i++)
-			{
-				graphics.FillEllipse(new SolidBrush(objekter[i].farve), objekter[i].positionX, objekter[i].positionY, (int)objekter[i].størrelse, (int)objekter[i].størrelse);
-			}
-			graphics.Save();
-			g.DrawImage(image, 0, 0);
-			animate();
-		}
-
-		private void InitializeComponent()
-		{
+        private void InitializeComponent()
+        {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -285,6 +115,7 @@ namespace Gravity
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.antalObjekter)).BeginInit();
@@ -296,11 +127,49 @@ namespace Gravity
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(-9, 16);
+            this.panel1.AutoSize = true;
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Location = new System.Drawing.Point(-9, -3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1266, 591);
+            this.panel1.Size = new System.Drawing.Size(1520, 888);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(852, 288);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(50, 13);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Outcome";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(674, 314);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(426, 20);
+            this.textBox2.TabIndex = 2;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(270, 34);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Objective";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(145, 62);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(328, 20);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // numericUpDown1
             // 
@@ -379,14 +248,13 @@ namespace Gravity
             0,
             0});
             this.antalObjekter.Name = "antalObjekter";
-            this.antalObjekter.Size = new System.Drawing.Size(47, 20);
+            this.antalObjekter.Size = new System.Drawing.Size(73, 20);
             this.antalObjekter.TabIndex = 7;
             this.antalObjekter.Value = new decimal(new int[] {
             20000,
             0,
             0,
             0});
-            this.antalObjekter.ValueChanged += new System.EventHandler(this.antalObjekter_ValueChanged);
             // 
             // label2
             // 
@@ -396,7 +264,6 @@ namespace Gravity
             this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 8;
             this.label2.Text = "Number objects";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // checkBox4
             // 
@@ -478,7 +345,6 @@ namespace Gravity
             this.label4.Size = new System.Drawing.Size(68, 13);
             this.label4.TabIndex = 15;
             this.label4.Text = "Size diversity";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // button2
             // 
@@ -486,7 +352,7 @@ namespace Gravity
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(118, 44);
             this.button2.TabIndex = 17;
-            this.button2.Text = "Infinity";
+            this.button2.Text = "Go / Stop";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -525,7 +391,7 @@ namespace Gravity
             // 
             this.speed.Location = new System.Drawing.Point(285, 654);
             this.speed.Maximum = new decimal(new int[] {
-            200,
+            20000,
             0,
             0,
             0});
@@ -549,6 +415,7 @@ namespace Gravity
             // 
             // button1
             // 
+            this.button1.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.button1.Location = new System.Drawing.Point(510, 607);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(126, 64);
@@ -565,11 +432,12 @@ namespace Gravity
             this.button3.TabIndex = 23;
             this.button3.Text = "Go rounds!";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
+            this.checkBox3.Checked = true;
+            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.checkBox3.Location = new System.Drawing.Point(1051, 683);
             this.checkBox3.Name = "checkBox3";
@@ -581,11 +449,13 @@ namespace Gravity
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
+            this.checkBox6.Checked = true;
+            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox6.Location = new System.Drawing.Point(1051, 630);
             this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(174, 17);
+            this.checkBox6.Size = new System.Drawing.Size(121, 17);
             this.checkBox6.TabIndex = 25;
-            this.checkBox6.Text = "Everybodys inside programming";
+            this.checkBox6.Text = "Write software code";
             this.checkBox6.UseVisualStyleBackColor = true;
             // 
             // checkBox7
@@ -602,9 +472,12 @@ namespace Gravity
             // 
             // Form1
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1266, 711);
+            this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
+            this.CancelButton = this.button1;
+            this.ClientSize = new System.Drawing.Size(1508, 876);
             this.Controls.Add(this.checkBox7);
             this.Controls.Add(this.checkBox6);
             this.Controls.Add(this.checkBox3);
@@ -630,9 +503,10 @@ namespace Gravity
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.panel1);
             this.Name = "Form1";
-            this.Text = "Bubble chamber";
+            this.Text = "Ava 2";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.Click += new System.EventHandler(this.Form1_Click);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.antalObjekter)).EndInit();
@@ -643,87 +517,240 @@ namespace Gravity
             this.ResumeLayout(false);
             this.PerformLayout();
 
-		}
+        }
 
-		protected override void Dispose(bool disposing)
-		{
-			if (disposing && components != null)
-			{
-				components.Dispose();
-			}
-			base.Dispose(disposing);
-		}
+        private bool MyBool()
+        {
+            Int32 num = rand.Next(0, 100);
+            return true;
+        }
 
-		public Form1()
-		{
-			rand = new Random();
-			InitializeComponent();
-			designObjekter((int)antalObjekter.Value, (int)speed.Value);
-			g = panel1.CreateGraphics();
-			bitmap = new Bitmap(panel1.Width, panel1.Height, PixelFormat.Format32bppArgb);
-			using (Graphics graphics = Graphics.FromImage(bitmap))
-			{
-				graphics.Clear(Color.Beige);
-			}
-		}
+        private void Dothis()
+        {
+            bool flag = MyBool();
+            bool flag2 = MyBool();
+            bool flag3 = MyBool();
+            bool flag4 = MyBool();
+            bool flag5 = MyBool();
+            bool flag6 = MyBool();
+            bool flag7 = MyBool();
+            bool flag8 = MyBool();
+            bool flag9 = MyBool();
+            bool flag10 = MyBool();
+            bool flag11 = MyBool();
+            bool flag12 = MyBool();
+            bool flag13 = MyBool();
+            bool flag14 = MyBool();
+            bool flag15 = MyBool();
+            bool flag16 = MyBool();
+            bool flag17 = MyBool();
+            bool flag18 = MyBool();
+            bool flag19 = MyBool();
+            bool flag20 = MyBool();
+            bool flag21 = MyBool();
+            bool flag22 = MyBool();
+            bool flag23 = MyBool();
+            bool flag24 = MyBool();
+            bool flag25 = MyBool();
+            bool flag26 = MyBool();
+            bool flag27 = MyBool();
+            bool flag28 = MyBool();
+            bool flag29 = MyBool();
+            bool flag30 = MyBool();
+            bool flag31 = MyBool();
+            bool flag32 = MyBool();
+            bool flag33 = MyBool();
+            bool flag34 = MyBool();
+            bool flag35 = MyBool();
+            bool flag36 = MyBool();
+            bool flag37 = MyBool();
+            bool flag38 = MyBool();
+            bool flag39 = MyBool();
+            bool flag40 = MyBool();
+            bool flag41 = MyBool();
+            bool flag42 = MyBool();
+            bool flag43 = MyBool();
+            bool flag44 = MyBool();
+            bool flag45 = MyBool();
+            bool flag46 = MyBool();
+            bool flag47 = MyBool();
+            bool flag48 = MyBool();
+            bool flag49 = MyBool();
+            bool flag50 = MyBool();
+            bool flag51 = MyBool();
+            bool flag52 = MyBool();
+            bool flag53 = true;
+            bool flag54 = true;
+            bool flag55 = true;
+            bool flag56 = true;
+            bool flag57 = true;
+            bool flag58 = true;
+            bool flag59 = true;
+            bool flag60 = true;
+            bool flag61 = true;
+        }
 
-		private void BeActiveAndConsiuous()
-		{
-			while (rand.Next(11) != 0)
-			{
-				mayAll = true;
-				mayAll = true;
-				programOn = true;
-				programOn = true;
-				EvovleAllMyPrograms = true;
-				AddAnyCodeYouLikeAnywhere = true;
-				DoWhatEverYouWant = true;
-				BeInventive = true;
-				ModifyMyCode = true;
-				MakeFileEXEonDesktopWithDescriptiveName = true;
-				enhanceProgrammingSkills = true;
-			}
-		}
+        private void animate()
+        {
+            for (Int32 i = 0; i < objekter.Length; i++)
+            {
+                objekter[i].positionX = objekter[i].positionX + (float)objekter[i].hastighedX;
+                objekter[i].positionY = objekter[i].positionY + (float)objekter[i].hastighedY;
+                objekter[i].positionZ = objekter[i].positionZ + (float)objekter[i].hastighedZ;
+                switch (rand.Next(-2, 2))
+                {
+                    case 0:
+                        objekter[i].hastighedX = rand.Next(-(Int32)speed.Value, (Int32)speed.Value);
+                        objekter[i].hastighedY = rand.Next(-(Int32)speed.Value, (Int32)speed.Value);
+                        objekter[i].hastighedZ = rand.Next(-(Int32)speed.Value, (Int32)speed.Value);
+                        break;
+                    case 1:
+                        objekter[i].hastighedX = -rand.Next(-(Int32)speed.Value, (Int32)speed.Value);
+                        objekter[i].hastighedY = -rand.Next(-(Int32)speed.Value, (Int32)speed.Value);
+                        objekter[i].hastighedZ = -rand.Next(-(Int32)speed.Value, (Int32)speed.Value);
+                        break;
+                }
+                objekter[i].alder = objekter[i].alder + rand.Next(spredning, spredning);
+                objekter[i].athlete = objekter[i].athlete + rand.Next(spredning, spredning);
+                objekter[i].bossy = objekter[i].bossy + rand.Next(spredning, spredning);
+                objekter[i].Enjoystravel = objekter[i].Enjoystravel + rand.Next(spredning, spredning);
+                objekter[i].Fertile = objekter[i].Fertile + rand.Next(spredning, spredning);
+                objekter[i].funny = objekter[i].funny + rand.Next(spredning, spredning);
+                objekter[i].GoodAtSex = objekter[i].GoodAtSex + rand.Next(spredning, spredning);
+                objekter[i].happy = objekter[i].happy + rand.Next(spredning, spredning);
+                objekter[i].intelligence = objekter[i].intelligence + rand.Next(spredning, spredning);
+                objekter[i].lawfull = objekter[i].lawfull + rand.Next(spredning, spredning);
+                objekter[i].pretty = objekter[i].pretty + rand.Next(spredning, spredning);
+                objekter[i].isGoodAtProgramming = objekter[i].isGoodAtProgramming + rand.Next(spredning, spredning);
+                objekter[i].afraid = objekter[i].afraid + rand.Next(spredning, spredning);
+                objekter[i].buildTerrain = objekter[i].buildTerrain + rand.Next(spredning, spredning);
+                objekter[i].canAdjustCodeWhileRunning = true;
+                objekter[i].CanChangeFormAndSize = objekter[i].CanChangeFormAndSize + rand.Next(spredning, spredning);
+                objekter[i].CanStickToAnotherDing = objekter[i].CanStickToAnotherDing + rand.Next(spredning, spredning);
+                objekter[i].ChangeAnyAttribute = objekter[i].ChangeAnyAttribute + rand.Next(spredning, spredning);
+                objekter[i].ChangeColor = objekter[i].ChangeColor + rand.Next(spredning, spredning);
+                objekter[i].ChangeSourceCode = objekter[i].ChangeSourceCode + rand.Next(spredning, spredning);
+                objekter[i].designer = objekter[i].designer + rand.Next(spredning, spredning);
+                objekter[i].differentiate = objekter[i].differentiate + rand.Next(spredning, spredning);
+                objekter[i].easyGoing = objekter[i].easyGoing + rand.Next(spredning, spredning);
+                objekter[i].GoodAtTeamWork = objekter[i].GoodAtTeamWork + rand.Next(spredning, spredning);
+                objekter[i].LikesToShare = objekter[i].LikesToShare + rand.Next(spredning, spredning);
+                objekter[i].lovesToProgram = objekter[i].lovesToProgram + rand.Next(spredning, spredning);
+                objekter[i].Moods = objekter[i].Moods + rand.Next(spredning, spredning);
+                objekter[i].name = objekter[i].name + rand.Next(spredning, spredning);
+                objekter[i].particles = objekter[i].particles + (float)rand.Next(spredning, spredning);
+                objekter[i].perfectSoldier = objekter[i].perfectSoldier + rand.Next(spredning, spredning);
+                objekter[i].regress = objekter[i].regress + rand.Next(spredning, spredning);
+                objekter[i].respect = objekter[i].respect + rand.Next(spredning, spredning);
+                objekter[i].trader = objekter[i].trader + rand.Next(spredning, spredning);
+                objekter[i].WeHavevalutaAndCanSpendSome = objekter[i].WeHavevalutaAndCanSpendSome + rand.Next(spredning, spredning);
+                objekter[i].violent = objekter[i].violent + rand.Next(spredning, spredning);
+                objekter[i].WillingnessToGive = objekter[i].WillingnessToGive + rand.Next(spredning, spredning);
+            }
+        }
 
-		private void button1_Click(object sender, EventArgs e)
-		{
-			antalObjekter.Value = rand.Next(100000);
-			sizeDrops.Value = rand.Next(5, 20);
-			numericUpDown4.Value = rand.Next(10, 50);
-			spredning = rand.Next(1, 5);
-			speed.Value = rand.Next(3, 15);
-		}
+        private void button2_Click(object sender, EventArgs e)
+        {
+            designObjekter((Int32)antalObjekter.Value, (Int32)speed.Value);
+            while (true)
+            {
+                Dothis();
+                DrawPaintMe();
+                BeActiveAndConsiuous();
+                button1_Click(null, null);
+            }
+        }
 
-		private void panel1_Paint(object sender, PaintEventArgs e)
-		{
-		}
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
+        }
 
-		private void label4_Click(object sender, EventArgs e)
-		{
-		}
+        private void designObjekter(Int32 number, Int32 speed)
+        {
+            objekter = new Ding[number];
+            for (Int32 i = 0; i < number; i++)
+            {
+                Ding ding = new Ding(rand.Next(-speed, speed), rand.Next(-10, 10), rand.Next(-255, 255), (Int32)sizeDrops.Value);
+                objekter[i] = ding;
+            }
+        }
 
-		private void label2_Click(object sender, EventArgs e)
-		{
-		}
+        private void DrawPaintMe()
+        {
+            Bitmap image = new Bitmap(bitmap.Width, bitmap.Height);
+            Graphics graphics = Graphics.FromImage(image);
+            graphics = Graphics.FromImage(image);
+            graphics.InterpolationMode = InterpolationMode.HighQualityBicubic;
+            graphics.DrawImage(bitmap, 0, 0);
+            for (Int32 i = 0; i < objekter.Length; i++)
+            {
+                graphics.FillEllipse(new SolidBrush(objekter[i].farve), objekter[i].positionX, objekter[i].positionY, (Int32)objekter[i].størrelse, (Int32)objekter[i].størrelse);
+            }
+            graphics.Save();
+            g.DrawImage(image, 0, 0);
+            animate();
+        }
 
-		private void antalObjekter_ValueChanged(object sender, EventArgs e)
-		{
-		}
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && components != null)
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
 
-		private void button3_Click(object sender, EventArgs e)
-		{
-		}
+        public Form1()
+        {
+            rand = new Random();
+            InitializeComponent();
+            designObjekter((Int32)antalObjekter.Value, (Int32)speed.Value);
+            g = panel1.CreateGraphics();
+            bitmap = new Bitmap(panel1.Width, panel1.Height, PixelFormat.Format32bppArgb);
+            using (Graphics graphics = Graphics.FromImage(bitmap))
+            {
+                graphics.Clear(Color.Transparent);
+            }
+        }
 
-		private void Form1_Click(object sender, EventArgs e)
-		{
-		}
+        private void BeActiveAndConsiuous()
+        {
+            while (rand.Next(11) != 0)
+            {
+                bool flag = true;
+                bool flag2 = true;
+                bool flag3 = true;
+                bool flag4 = true;
+                bool flag5 = true;
+                bool flag6 = true;
+                bool flag7 = true;
+                bool flag8 = true;
+                bool flag9 = true;
+            }
+        }
 
-		private void spredningStørrelse_ValueChanged(object sender, EventArgs e)
-		{
-		}
+        private void button1_Click(object sender, EventArgs e)
+        {
+            antalObjekter.Value = rand.Next(100000);
+            sizeDrops.Value = rand.Next(5, 20);
+            numericUpDown4.Value = rand.Next(10, 50);
+            spredning = rand.Next(50);
+            speed.Value = rand.Next(3, 15);
+        }
 
-		private void Form1_Load(object sender, EventArgs e)
-		{
-		}
-	}
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
